@@ -28,6 +28,16 @@ a.navbar-brand {
     margin: 2rem 5rem;
 }
 
+.accordion-item {
+    margin-bottom: 24px !important;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+}
+
+.accordion {
+    --bs-accordion-border-color: none !important;
+}
+
 .accordion-button:not(.collapsed) {
     background-color: var(--primary) !important;
     box-shadow: none !important;
@@ -42,7 +52,7 @@ a.navbar-brand {
 .accordion-button {
     background-color: var(--primary) !important;
     color: var(--peace) !important;
-    margin-bottom: 12px !important;
+    /* margin-bottom: 12px !important; */
     border-radius: 5px !important;
 }
 
@@ -148,8 +158,8 @@ a.see-more-btn {
 }
 
 .btn-sec-steps:hover {
-    color: #FFF;
-    background-color: #0aa37d;
+    color: #11B98F;
+    background-color: #dafff6;
 }
 
 /* domain-card */
@@ -187,18 +197,6 @@ a.see-more-btn {
     border: 1px solid #D5E1ED;
     background-color: var(--background);
 
-}
-
-.domain-btn {
-    padding: 12px 20px;
-    background-color: var(--primary);
-    color: var(--peace);
-    font-weight: 500;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    width: fit-content;
-    margin-top: 12px;
 }
 
 .domain-card-container>p {
