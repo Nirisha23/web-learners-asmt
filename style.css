@@ -223,4 +223,14 @@ a.see-more-btn {
         width: 100%;
         margin: 0;
     }
+
+    .btn-pri-steps {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .btn-sec-steps {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
 }
