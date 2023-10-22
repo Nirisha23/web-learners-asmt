@@ -203,6 +203,13 @@ a.see-more-btn {
     color: var(--subText);
 }
 
+.hero-banner {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
 @media(max-width: 1200px) {
     .domain-card {
         width: 60%;
@@ -232,5 +239,9 @@ a.see-more-btn {
     .btn-sec-steps {
         padding: 12px 24px;
         font-size: 14px;
+    }
+
+    .hero-banner {
+        margin-bottom: 16px;
     }
 }
