@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --primary: #11B98F;
+    --peace: #ffffff;
+    --text: #2E3A5E;
+    --subText: #8392A6;
+    --background: #EAF0F6;
+}
+
+a.nav-link {
+    font-weight: 500;
+}
+
+a.navbar-brand {
+    font-weight: 700;
+}
+
+/* Products accordion */
+.products-accordion {
+    margin: 2rem 5rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary) !important;
+    box-shadow: none !important;
+    color: var(--peace) !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-color: var(--border) !important;
+}
+
+.accordion-button {
+    background-color: var(--primary) !important;
+    color: var(--peace) !important;
+    margin-bottom: 12px !important;
+    border-radius: 5px !important;
+}
+
+.accordion-button::after {
+    background-image: url('./Assets/arrow-down.svg') !important;
+}
+
+.accordion-body {
+    background-color: var(--background) !important;
+}
+
+.products-head {
+    font-size: 18px;
+    color: var(--text);
+    padding: 32px 0;
+    font-weight: 600;
+    border-bottom: 1px solid #D8E1EA;
+    margin-bottom: 32px;
+}
+
+.card-text {
+    --max-lines: 2;
+    --line-height: 1.4;
+
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+
+    overflow: hidden;
+    position: relative;
+}
+
+.card-text:has(+ .expanded-btn:not(:checked))::before {
+    content: "";
+    position: absolute;
+    height: calc(1em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transperent, white);
+}
+
+.card-text:has(+ .expanded-btn:checked) {
+    max-height: none;
+}
+
+.expanded-btn {
+    appearance: none;
+    color: #000;
+}
+
+.expanded-btn::before {
+    content: "See More"
+}
+
+.expanded-btn:checked::before {
+    content: "See Less"
+}
+
+a.see-more-btn {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.card-title {
+    color: var(--text) !important;
+    font-weight: 700;
+}
+
+.card-text {
+    color: var(--subText);
+}
+
+.card-img-top {
+    overflow: hidden;
+}
+
+.btn-pri-steps {
+    padding: 16px 48px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    line-height: normal;
+}
+
+.btn-pri-steps:hover {
+    background-color: #0aa37d;
+}
+
+.btn-sec-steps {
+    padding: 16px 48px;
+    border-radius: 5px;
+    border: 1px solid #12AA84;
+    background: rgba(255, 255, 255, 0.70);
+    color: #11B98F;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.btn-sec-steps:hover {
+    color: #FFF;
+    background-color: #0aa37d;
+}
+
+/* domain-card */
+.domain-card {
+    margin: 32px;
+    padding: 16px;
+    border: 1px solid #F0F3F8;
+    background-color: var(--peace);
+    border-radius: 20px;
+    box-shadow: 6px 6px 24px 0px rgba(28, 49, 88, 0.05);
+    width: 45%;
+}
+
+.domain-card-head {
+    padding: 32px 0;
+    font-size: 22px;
+}
+
+.domain-card-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.domain-card-container>h4 {
+    font-size: 18px;
+    padding-bottom: 12px;
+}
+
+.domain-card-container>input {
+    margin: 12px 0;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #D5E1ED;
+    background-color: var(--background);
+
+}
+
+.domain-btn {
+    padding: 12px 20px;
+    background-color: var(--primary);
+    color: var(--peace);
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 12px;
+}
+
+.domain-card-container>p {
+    color: var(--subText);
+}
+
+@media(max-width: 1200px) {
+    .domain-card {
+        width: 60%;
+    }
+}
+
+@media(max-width: 992px) {
+    .products-accordion {
+        margin: 16px 8px;
+    }
+
+    .section-sec-group {
+        flex-direction: column;
+        gap: 1.5rem
+    }
+
+    .domain-card {
+        width: 100%;
+        margin: 0;
+    }
+}
